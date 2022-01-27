@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './Card';
 
+
 const Countries = () => {
   const [data, setData] = useState([]);
   const [sortedData, setSortedData]= useState([]);
@@ -9,6 +10,7 @@ const Countries = () => {
   const [rangeValue, setRangeValue] = useState(40);
   const [selectedRadio, setSelectedRadio] = useState('');
   const radios = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
+
 
   useEffect(() => {
     if (playOnce) {
