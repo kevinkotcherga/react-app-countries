@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './Card';
-
+import { Radio } from 'antd';
 
 const Countries = () => {
   const [data, setData] = useState([]);
@@ -39,7 +39,7 @@ const Countries = () => {
           {radios.map((radio) => {
             return (
               <li key={radio}>
-                <input type="radio" value={radio} id={radio}checked={radio === selectedRadio} onChange={(e) => setSelectedRadio(e.target.value)}/>
+                <Radio type="radio" value={radio} id={radio}checked={radio === selectedRadio} onChange={(e) => setSelectedRadio(e.target.value)}/>
                 <label htmlFor={radio}>{radio}</label>
               </li>
             )
